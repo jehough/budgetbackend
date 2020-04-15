@@ -14,5 +14,13 @@ module Types
       User.all
     end
   
+    field :budgets,
+      [Types::BudgetType],
+      null: false,
+      description: "Returns a list of budgets"
+
+    def budgets
+      Budget.all
+    end
   end
 end
