@@ -9,5 +9,15 @@ module Types
     def test_field
       "Hello World!"
     end
+
+    field :budgets,
+      [Types::BudgetType],
+      null: false,
+      description: "Returns a list of budgets"
+
+    def items
+      Item.all
+    end
+  
   end
 end
